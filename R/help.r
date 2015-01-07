@@ -1,10 +1,10 @@
-#' greer : A package for confidence intervals on ratios of Poisson rates
+#' poisDoubleSamp : Confidence intervals with Poisson double sampling
 #'
-#' greer description
+#' Functions to create confidence intervals for ratios of Poisson rates under misclassification using double sampling.
 #'
 #' @import Rcpp
-#' @useDynLib greer
+#' @useDynLib poisDoubleSamp
 #' @docType package
-#' @name greer
-#' @aliases greer package-greer
+#' @name poisDoubleSamp
+#' @aliases poisDoubleSamp package-poisDoubleSamp
 NULL
