@@ -7,7 +7,7 @@ BugReports: https://github.com/dkahle/poisDoubleSamp/issues
 Authors@R: as.person(c(
     "David Kahle <david.kahle@gmail.com> [aut, cre]",
     "Phil Young <philip_young@baylor.edu> [aut]",
-    "Brandi Greer <brandi_greer@baylor.edu> [aut] (Publlished posthumously)",
+    "Brandi Greer <brandi_greer@baylor.edu> [aut] (Published posthumously)",
     "Dean Young <dean_young@baylor.edu> [aut]"
     ))
 LinkingTo: Rcpp
