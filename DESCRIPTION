@@ -1,6 +1,6 @@
 Package: poisDoubleSamp
-Version: 0.0
-Date: 2015-01-28
+Version: 1.0
+Date: 2015-02-02
 Title: Confidence intervals with Poisson double sampling
 Description: Functions to create confidence intervals for ratios of Poisson
     rates under misclassification using double sampling.

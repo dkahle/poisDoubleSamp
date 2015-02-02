@@ -4,7 +4,7 @@
 \alias{margMLECI}
 \title{Compute the marginal MLE confidence interval for the phi}
 \usage{
-margMLECI(data, N1, N2, N01, N02, conf.level = 0.95, l = 0.001, u = 1000)
+margMLECI(data, N1, N2, N01, N02, conf.level = 0.95, l = 1e-10, u = 1e+10)
 }
 \arguments{
 \item{data}{the vector of counts of the fallible data (z11, z12, z21, z22) followed by the infallible data (m011, m012, m021, m022, y01, y02)}

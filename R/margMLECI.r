@@ -44,7 +44,7 @@
 #'
 #' }
 #'
-margMLECI <- function(data, N1, N2, N01, N02, conf.level = .95, l = 1e-3, u = 1e3){
+margMLECI <- function(data, N1, N2, N01, N02, conf.level = .95, l = 1e-10, u = 1e10){
   
   z11 <- data[1]; z12 <- data[2]; z21 <- data[3]; z22 <- data[4];
   m011 <- data[5]; m012 <- data[6]; m021 <- data[7]; m022 <- data[8]; 
@@ -78,11 +78,12 @@ margMLECI <- function(data, N1, N2, N01, N02, conf.level = .95, l = 1e-3, u = 1e
     ) - (lAtMargPhiHat - qchisq(conf.level, df = 1)/2)
   
   
-  lower <- uniroot(unNormLikeMinusVal, 
-    lower = l, upper = margPhiHat, extendInt = "upX")$root
   
-  upper <- uniroot(unNormLikeMinusVal, 
-    lower = margPhiHat, upper = u, extendInt = "downX")$root
+  lower <- suppressWarnings(uniroot(unNormLikeMinusVal, 
+    lower = l, upper = margPhiHat, extendInt = "upX")$root)
+  
+  upper <- suppressWarnings(uniroot(unNormLikeMinusVal, 
+    lower = margPhiHat, upper = u, extendInt = "downX")$root)
   
   c(l = lower, u = upper)
 }
