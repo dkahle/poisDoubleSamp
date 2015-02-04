@@ -13,8 +13,8 @@ double unNormedMargLogLikeMaxLogTermCpp(double phi,
   double biggestLogTerm = Rf_lchoose(z12, 0) + Rf_lchoose(z22, 0) + 
     (m011 + z11 + 0)*log(phi) + 
     lgamma(m012 + z12 - 0 + 1) -
-    (m012 + z12 - 0 + 1)*log(N1 + N01) -
-    (m022 + z22 - 0 + 1)*log(N2 + N02) +
+    (m012 + z12 - 0 + 1)*log(N1 + N01 + 0.) -
+    (m022 + z22 - 0 + 1)*log(N2 + N02 + 0.) +
     lgamma(m022 + z22 - 0 + 1) +
     lgamma(m011 + m021 + z11 + z21 + 0 + 0 + 1) -
     (m011 + m021 + z11 + z21 + 0 + 0 + 1) * 
@@ -31,8 +31,8 @@ double unNormedMargLogLikeMaxLogTermCpp(double phi,
         Rf_lchoose(z12, k) + Rf_lchoose(z22, l) + 
         (m011 + z11 + k)*log(phi) + 
         lgamma(m012 + z12 - k + 1) -
-        (m012 + z12 - k + 1)*log(N1 + N01) -
-        (m022 + z22 - l + 1)*log(N2 + N02) +
+        (m012 + z12 - k + 1)*log(N1 + N01 + 0.) -
+        (m022 + z22 - l + 1)*log(N2 + N02 + 0.) +
         lgamma(m022 + z22 - l + 1) +
         lgamma(m011 + m021 + z11 + z21 + k + l + 1) -
         (m011 + m021 + z11 + z21 + k + l + 1) * 

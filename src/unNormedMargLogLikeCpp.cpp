@@ -25,8 +25,8 @@ double unNormedMargLogLikeCpp(double phi, double shift,
       logTerm = Rf_lchoose(z12, k) + Rf_lchoose(z22, l) + 
         (m011 + z11 + k)*log(phi) + 
         lgamma(m012 + z12 - k + 1) -
-        (m012 + z12 - k + 1)*log(N1 + N01) -
-        (m022 + z22 - l + 1)*log(N2 + N02) +
+        (m012 + z12 - k + 1)*log(N1 + N01 + 0.) -
+        (m022 + z22 - l + 1)*log(N2 + N02 + 0.) +
         lgamma(m022 + z22 - l + 1) +
         lgamma(m011 + m021 + z11 + z21 + k + l + 1) -
         (m011 + m021 + z11 + z21 + k + l + 1) * 
